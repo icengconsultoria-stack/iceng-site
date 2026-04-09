@@ -20,6 +20,7 @@ import {
   Sparkles,
   Target,
   Wrench,
+  Phone,
 } from 'lucide-react'
 
 const WHATSAPP_URL = 'https://wa.me/5575991438777'
@@ -264,11 +265,27 @@ function Button({ className = '', variant = 'default', size = 'default', asChild
   return <Comp className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}>{children}</Comp>
 }
 
+function FloatingWhatsApp() {
+  return (
+    <a
+      href={WHATSAPP_URL}
+      target="_blank"
+      rel="noreferrer"
+      className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-2 rounded-full bg-green-500 px-5 py-3 text-sm font-semibold text-white shadow-2xl transition hover:bg-green-400"
+    >
+      <Phone className="h-4 w-4" />
+      <span className="hidden sm:inline">Falar no WhatsApp</span>
+    </a>
+  )
+}
+
 export default function App() {
   const [openFaq, setOpenFaq] = useState(0)
 
   return (
     <div className="min-h-screen bg-[#06101f] text-white">
+      <FloatingWhatsApp />
+
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,158,11,0.18),transparent_24%),radial-gradient(circle_at_top_right,rgba(29,78,216,0.22),transparent_28%),linear-gradient(180deg,#07111f_0%,#081527_36%,#06101f_100%)]" />
         <div className="absolute left-0 top-24 h-96 w-96 rounded-full bg-blue-600/10 blur-3xl" />
@@ -318,15 +335,15 @@ export default function App() {
               </div>
 
               <h1 className="max-w-xl text-4xl font-black leading-[1.08] md:text-5xl xl:text-[3rem]">
-  Soluções em{" "}
-  <span className="text-amber-300">
-    Engenharia, Vistorias Técnicas, Orçamentos e Certificações.
-  </span>
-</h1>
+                Soluções em{' '}
+                <span className="text-amber-300">
+                  Engenharia, Vistorias Técnicas, Orçamentos e Certificações.
+                </span>
+              </h1>
 
-             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300 md:text-xl">
-  Nosso objetivo é transformar necessidades diversas em soluções claras, organizadas e tecnicamente bem direcionadas, com mais segurança, orientação e suporte especializado em cada etapa.
-</p>
+              <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300 md:text-xl">
+                Nosso objetivo é transformar necessidades diversas em soluções claras, organizadas e tecnicamente bem direcionadas, com mais segurança, orientação e suporte especializado em cada etapa.
+              </p>
 
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {stats.map(({ label, icon: Icon }) => (
