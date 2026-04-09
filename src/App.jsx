@@ -317,15 +317,16 @@ export default function App() {
                 Site institucional comercial
               </div>
 
-              <h1 className="max-w-3xl text-4xl font-black leading-[1.02] md:text-5xl xl:text-6xl">
-                Soluções em{' '}
-                <span className="text-amber-300">Engenharia, Vistorias Técnicas, Orçamentos e Certificações</span>{' '}
-                para orientar, organizar e apoiar cada necessidade com mais clareza e segurança.
-              </h1>
+              <h1 className="max-w-xl text-4xl font-black leading-[1.08] md:text-5xl xl:text-[3rem]">
+  Soluções em{" "}
+  <span className="text-amber-300">
+    Engenharia, Vistorias Técnicas, Orçamentos e Certificações.
+  </span>
+</h1>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300 md:text-xl">
-                Nosso objetivo é transformar necessidades diversas em soluções claras, organizadas e tecnicamente bem direcionadas, seja para uma empresa, profissional ou cliente que precise de suporte especializado.
-              </p>
+             <p className="mt-6 max-w-xl text-lg leading-8 text-slate-300 md:text-xl">
+  Nosso objetivo é transformar necessidades diversas em soluções claras, organizadas e tecnicamente bem direcionadas, com mais segurança, orientação e suporte especializado em cada etapa.
+</p>
 
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {stats.map(({ label, icon: Icon }) => (
