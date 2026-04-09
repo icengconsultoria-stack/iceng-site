@@ -23,8 +23,8 @@ import {
   Wrench,
   Phone,
 } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "./components/ui/card";
+import { Button } from "./components/ui/button";
 
 const WHATSAPP_URL = "https://wa.me/5575991438777";
 
