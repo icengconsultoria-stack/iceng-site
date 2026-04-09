@@ -23,8 +23,6 @@ import {
   Wrench,
   Phone,
 } from "lucide-react";
-import { Card, CardContent } from "./components/ui/card";
-import { Button } from "./components/ui/button";
 
 const WHATSAPP_URL = "https://wa.me/5575991438777";
 
@@ -80,16 +78,15 @@ export default function IcengSiteInstitucional() {
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
-            <Button
-              asChild
-              size="lg"
-              className="bg-green-500 text-white hover:bg-green-400"
-            >
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
-                Falar com especialista
-                <ArrowRight className="ml-2" />
-              </a>
-            </Button>
+            <a
+  href={WHATSAPP_URL}
+  target="_blank"
+  rel="noreferrer"
+  className="inline-flex items-center justify-center bg-green-500 px-6 py-3 rounded text-white hover:bg-green-400"
+>
+  Falar com especialista
+  <ArrowRight className="ml-2" />
+</a>
           </div>
 
           {/* 🔥 PROVA SOCIAL */}
@@ -113,11 +110,14 @@ export default function IcengSiteInstitucional() {
               Quanto mais você demora, maior o risco de prejuízo.
             </p>
 
-            <Button asChild className="mt-6 bg-amber-400 text-black">
-              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
-                Resolver agora
-              </a>
-            </Button>
+            <a
+  href={WHATSAPP_URL}
+  target="_blank"
+  rel="noreferrer"
+  className="mt-6 inline-flex items-center justify-center bg-amber-400 px-6 py-3 rounded text-black"
+>
+  Resolver agora
+</a>
           </div>
         </section>
 
@@ -132,11 +132,14 @@ export default function IcengSiteInstitucional() {
             direcionar a melhor solução.
           </p>
 
-          <Button asChild size="lg" className="mt-6 bg-green-500 text-white">
-            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer">
-              Iniciar conversa
-            </a>
-          </Button>
+          <a
+  href={WHATSAPP_URL}
+  target="_blank"
+  rel="noreferrer"
+  className="mt-6 inline-flex items-center justify-center bg-green-500 px-6 py-3 rounded text-white"
+>
+  Iniciar conversa
+</a>
         </section>
       </main>
     </div>
