@@ -317,7 +317,7 @@ export default function App() {
                 Site institucional comercial
               </div>
 
-              <h1 className="max-w-4xl text-4xl font-black leading-tight md:text-6xl xl:text-7xl">
+              <h1 className="max-w-3xl text-4xl font-black leading-[1.02] md:text-5xl xl:text-6xl">
                 Soluções em{' '}
                 <span className="text-amber-300">Engenharia, Vistorias Técnicas, Orçamentos e Certificações</span>{' '}
                 para orientar, organizar e apoiar cada necessidade com mais clareza e segurança.
