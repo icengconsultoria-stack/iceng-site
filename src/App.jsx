@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import {
@@ -250,6 +249,22 @@ function CardContent({ className = '', children }) {
   return <div className={className}>{children}</div>
 }
 
+function Button({ className = '', variant = 'default', size = 'default', asChild = false, children }) {
+  const Comp = asChild ? 'span' : 'button'
+  const base =
+    'inline-flex items-center justify-center gap-2 transition focus:outline-none focus:ring-2 focus:ring-amber-300/60'
+  const variants = {
+    default: '',
+    outline: '',
+  }
+  const sizes = {
+    default: 'px-4 py-2.5 text-sm',
+    lg: 'px-6 py-3 text-base',
+  }
+
+  return <Comp className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}>{children}</Comp>
+}
+
 function FloatingWhatsApp() {
   return (
     <a
@@ -477,12 +492,12 @@ export default function App() {
                 rel="noreferrer"
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.2 }}
-                className="block h-full cursor-pointer"
+                className="group block h-full cursor-pointer"
               >
                 <Card
-                  className={`h-full border backdrop-blur-sm transition ${featured ? 'border-amber-400/30 bg-amber-300/10 hover:border-amber-300/50' : 'border-white/10 bg-white/5 hover:border-white/20'}`}
+                  className={`h-full border backdrop-blur-sm transition duration-200 group-hover:border-amber-400/50 group-hover:shadow-[0_0_30px_rgba(245,158,11,0.08)] ${featured ? 'border-amber-400/30 bg-amber-300/10' : 'border-white/10 bg-white/5'}`}
                 >
-                  <CardContent className="flex h-full flex-col p-6">
+                  <CardContent className="flex h-full min-h-[340px] flex-col p-6">
                     <div className="mb-4 flex items-center justify-between gap-3">
                       <div className="inline-flex rounded-2xl bg-amber-300/10 p-3 text-amber-300">
                         <Icon className="h-6 w-6" />
@@ -496,7 +511,7 @@ export default function App() {
                     <div className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">{subtitle}</div>
                     <h3 className="mt-2 text-2xl font-bold text-white">{title}</h3>
                     <p className="mt-3 flex-1 leading-7 text-slate-300">{description}</p>
-                    <div className="mt-6 inline-flex items-center justify-center rounded-2xl bg-amber-400 px-4 py-3 font-medium text-slate-950 transition hover:bg-amber-300">
+                    <div className="mt-6 inline-flex items-center justify-center rounded-2xl bg-amber-400 px-4 py-3 font-medium text-slate-950 transition group-hover:bg-amber-300">
                       {buttonLabel}
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </div>
