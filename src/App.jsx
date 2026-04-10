@@ -378,15 +378,15 @@ export default function App() {
               <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-slate-400">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-amber-300" />
-                  Estrutura pronta para crescer
+                  Estratégia alinhada à sua realidade
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-amber-300" />
-                  Serviços e produtos no mesmo ambiente
+                  Organização para crescer com segurança
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-amber-300" />
-                  Visual institucional e profissional
+                  Suporte técnico contínuo
                 </div>
               </div>
             </motion.div>
