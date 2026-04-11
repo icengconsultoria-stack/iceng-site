@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import { productsWithPreview } from './productsConfig'
 import {
   ArrowRight,
   BadgeCheck,
@@ -265,6 +266,67 @@ function Button({ className = '', variant = 'default', size = 'default', asChild
   return <Comp className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}>{children}</Comp>
 }
 
+function PreviewModal({ product, onClose }) {
+  if (!product) return null
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={onClose}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4"
+    >
+      <motion.div
+        initial={{ scale: 0.95, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        exit={{ scale: 0.95, opacity: 0 }}
+        onClick={(e) => e.stopPropagation()}
+        className="relative max-h-[90vh] w-full max-w-4xl overflow-auto rounded-3xl border border-white/10 bg-[#06101f] p-6 shadow-2xl md:p-8"
+      >
+        <button
+          onClick={onClose}
+          className="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white transition hover:bg-white/20"
+        >
+          X
+        </button>
+
+        <div className="mb-6">
+          <h2 className="text-3xl font-bold text-white">{product.previewTitle}</h2>
+          <p className="mt-2 text-slate-400">{product.title}</p>
+        </div>
+
+        {product.previewType === 'pdf' && (
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+            <iframe
+              src={product.previewUrl}
+              className="h-[600px] w-full rounded-xl"
+              title={product.previewTitle}
+            />
+          </div>
+        )}
+
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+          <a
+            href={product.hotmartUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="flex-1 rounded-2xl bg-amber-400 px-6 py-3 text-center font-semibold text-slate-950 transition hover:bg-amber-300"
+          >
+            Comprar Produto Completo
+          </a>
+          <button
+            onClick={onClose}
+            className="flex-1 rounded-2xl border border-white/20 bg-white/5 px-6 py-3 font-semibold text-white transition hover:bg-white/10"
+          >
+            Fechar
+          </button>
+        </div>
+      </motion.div>
+    </motion.div>
+  )
+}
+
 function FloatingWhatsApp() {
   return (
     <a
@@ -281,10 +343,12 @@ function FloatingWhatsApp() {
 
 export default function App() {
   const [openFaq, setOpenFaq] = useState(0)
+  const [previewModal, setPreviewModal] = useState(null)
 
   return (
     <div className="min-h-screen bg-[#06101f] text-white">
       <FloatingWhatsApp />
+      {previewModal && <PreviewModal product={previewModal} onClose={() => setPreviewModal(null)} />}
 
       <div className="fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(245,158,11,0.18),transparent_24%),radial-gradient(circle_at_top_right,rgba(29,78,216,0.22),transparent_28%),linear-gradient(180deg,#07111f_0%,#081527_36%,#06101f_100%)]" />
@@ -484,23 +548,20 @@ export default function App() {
           />
 
           <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
-            {products.map(({ icon: Icon, title, subtitle, description, url, buttonLabel, featured }) => (
-              <motion.a
-                key={title}
-                href={url}
-                target="_blank"
-                rel="noreferrer"
+            {productsWithPreview.map(({ id, title, subtitle, description, hotmartUrl, previewUrl, previewTitle, featured }) => (
+              <motion.div
+                key={id}
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.2 }}
-                className="group block h-full cursor-pointer"
+                className="group block h-full"
               >
                 <Card
                   className={`h-full border backdrop-blur-sm transition duration-200 group-hover:border-amber-400/50 group-hover:shadow-[0_0_30px_rgba(245,158,11,0.08)] ${featured ? 'border-amber-400/30 bg-amber-300/10' : 'border-white/10 bg-white/5'}`}
                 >
-                  <CardContent className="flex h-full min-h-[340px] flex-col p-6">
+                  <CardContent className="flex h-full min-h-[380px] flex-col p-6">
                     <div className="mb-4 flex items-center justify-between gap-3">
                       <div className="inline-flex rounded-2xl bg-amber-300/10 p-3 text-amber-300">
-                        <Icon className="h-6 w-6" />
+                        <FileText className="h-6 w-6" />
                       </div>
                       {featured ? (
                         <div className="rounded-full border border-amber-400/30 bg-amber-300/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-200">
@@ -511,13 +572,28 @@ export default function App() {
                     <div className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">{subtitle}</div>
                     <h3 className="mt-2 text-2xl font-bold text-white">{title}</h3>
                     <p className="mt-3 flex-1 leading-7 text-slate-300">{description}</p>
-                    <div className="mt-6 inline-flex items-center justify-center rounded-2xl bg-amber-400 px-4 py-3 font-medium text-slate-950 transition group-hover:bg-amber-300">
-                      {buttonLabel}
-                      <ArrowRight className="ml-2 h-5 w-5" />
+                    <div className="mt-6 flex flex-col gap-2">
+                      {previewUrl && (
+                        <button
+                          onClick={() => setPreviewModal({ id, title, previewTitle, previewUrl, hotmartUrl })}
+                          className="inline-flex items-center justify-center rounded-2xl border border-amber-400/50 bg-amber-400/10 px-4 py-3 font-medium text-amber-300 transition hover:bg-amber-400/20"
+                        >
+                          Ver Amostra Grátis
+                        </button>
+                      )}
+                      <a
+                        href={hotmartUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-4 py-3 font-medium text-slate-950 transition hover:bg-amber-300"
+                      >
+                        Comprar Agora
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </a>
                     </div>
                   </CardContent>
                 </Card>
-              </motion.a>
+              </motion.div>
             ))}
           </div>
 
