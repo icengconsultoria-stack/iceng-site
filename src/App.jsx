@@ -302,6 +302,9 @@ function PreviewModal({ product, onClose }) {
               src={product.previewUrl}
               className="h-[600px] w-full rounded-xl"
               title={product.previewTitle}
+              frameBorder="0"
+              allowFullScreen
+              style={{ border: 'none' }}
             />
           </div>
         )}
@@ -578,7 +581,7 @@ export default function App() {
                           onClick={() => setPreviewModal({ id, title, previewTitle, previewUrl, hotmartUrl })}
                           className="inline-flex items-center justify-center rounded-2xl border border-amber-400/50 bg-amber-400/10 px-4 py-3 font-medium text-amber-300 transition hover:bg-amber-400/20"
                         >
-                          Ver Amostra Grátis
+                          Conheça o Produto
                         </button>
                       )}
                       <a
