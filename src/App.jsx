@@ -298,11 +298,11 @@ function PreviewModal({ product, onClose }) {
 
         {product.previewType === 'pdf' && (
           <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-            <iframe
-              src={`https://docs.google.com/gview?url=${window.location.origin}${product.previewUrl}&embedded=true`}
+            <embed
+              src={product.previewUrl}
+              type="application/pdf"
               className="h-[600px] w-full rounded-xl"
               title={product.previewTitle}
-              frameBorder="0"
               style={{ border: 'none' }}
             />
           </div>
