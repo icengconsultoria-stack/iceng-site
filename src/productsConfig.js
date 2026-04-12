@@ -9,8 +9,8 @@ export const productsWithPreview = [
     description:
       'Procedimentos operacionais e formulários para padronizar a rotina e fortalecer a base documental da empresa.',
     hotmartUrl: 'https://go.hotmart.com/S105270171H?dp=1',
-    previewUrl: '/samples/procedimentos-amostra.pdf',
-    previewType: 'pdf', // 'pdf', 'image', 'video'
+    previewImages: ['/samples/images/IT - HA - 001 - Locação de Obra-1.png', '/samples/images/IT - HA - 001 - Locação de Obra-2.png'],
+    previewType: 'image',
     previewTitle: 'Amostra: Procedimento de Recebimento de Materiais',
   },
   {
@@ -20,8 +20,8 @@ export const productsWithPreview = [
     description:
       'Instruções práticas para orientar a execução, melhorar o padrão operacional e apoiar a implantação.',
     hotmartUrl: 'https://go.hotmart.com/V105270264E',
-    previewUrl: '/samples/instrucoes-amostra.pdf',
-    previewType: 'pdf',
+    previewImages: ['/samples/images/IT - HA - 002 - Escavação Mecanizada-1.png', '/samples/images/IT - HA - 002 - Escavação Mecanizada-2.png'],
+    previewType: 'image',
     previewTitle: 'Amostra: Instrução de Trabalho - Segurança',
   },
   {
@@ -31,8 +31,8 @@ export const productsWithPreview = [
     description:
       'Material voltado à estrutura de segurança do trabalho, com foco em organização e conformidade documental.',
     hotmartUrl: 'https://go.hotmart.com/H105270528Y',
-    previewUrl: '/samples/sst-amostra.pdf',
-    previewType: 'pdf',
+    previewImages: ['/samples/images/IT - HA - 003 - Raspagem e Limpeza do Terreno-1.png', '/samples/images/IT - HA - 003 - Raspagem e Limpeza do Terreno-2.png'],
+    previewType: 'image',
     previewTitle: 'Amostra: Checklist de Segurança do Trabalho',
   },
   {
@@ -42,8 +42,8 @@ export const productsWithPreview = [
     description:
       'Conteúdo para apoiar a padronização, orientar a equipe e consolidar a base do sistema de gestão.',
     hotmartUrl: 'https://go.hotmart.com/F105269835T',
-    previewUrl: '/samples/its-manual-amostra.pdf',
-    previewType: 'pdf',
+    previewImages: ['/samples/images/IT - HA - 004 - Aterro Compactado Mecanicamente-1.png', '/samples/images/IT - HA - 004 - Aterro Compactado Mecanicamente-2.png'],
+    previewType: 'image',
     previewTitle: 'Amostra: Instruções de Trabalho Selecionadas',
   },
   {
@@ -53,8 +53,8 @@ export const productsWithPreview = [
     description:
       'A solução mais completa para quem quer acelerar a implantação com documentos, controles e estrutura integrada.',
     hotmartUrl: 'https://go.hotmart.com/L105258643W',
-    previewUrl: '/samples/sgq-completo-amostra.pdf',
-    previewType: 'pdf',
+    previewImages: ['/samples/images/IT - HA - 005 - Escavação Manual-1.png', '/samples/images/IT - HA - 005 - Escavação Manual-2.png'],
+    previewType: 'image',
     previewTitle: 'Amostra: Estrutura Completa do SGQ',
     featured: true,
   },
@@ -65,8 +65,8 @@ export const productsWithPreview = [
     description:
       'Versão premium com checklist e recursos extras para quem deseja mais clareza, apoio e agilidade no processo.',
     hotmartUrl: 'https://go.hotmart.com/L105261429W?dp=1',
-    previewUrl: '/samples/sgq-premium-amostra.pdf',
-    previewType: 'pdf',
+    previewImages: ['/samples/images/IT - HA - 006 - Execução de Forma de Fundação-1.png', '/samples/images/IT - HA - 006 - Execução de Forma de Fundação-2.png'],
+    previewType: 'image',
     previewTitle: 'Amostra: Kit Premium com Checklists',
     featured: true,
   },
