@@ -368,15 +368,7 @@ export default function App() {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-[#06101f]/80 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-amber-400/30 bg-gradient-to-br from-amber-300/25 to-amber-500/10 shadow-[0_0_30px_rgba(245,158,11,0.12)]">
-              <ShieldCheck className="h-5 w-5 text-amber-300" />
-            </div>
-            <div>
-              <div className="text-lg font-extrabold tracking-wide">ICENG CONSULTORIA</div>
-              <div className="text-xs uppercase tracking-[0.28em] text-slate-400">
-                Engenharia • Gestão • Soluções Técnicas
-              </div>
-            </div>
+            <img src="/logo-iceng.webp" alt="ICENG Consultoria" className="h-12 w-auto" />
           </div>
 
           <div className="hidden items-center gap-6 text-sm text-slate-300 lg:flex">
