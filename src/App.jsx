@@ -300,12 +300,15 @@ function PreviewModal({ product, onClose }) {
           <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
             <div className="grid gap-3">
               {product.previewImages.map((img, idx) => (
-                <img
+                <a
                   key={idx}
-                  src={img}
-                  alt={`Amostra ${idx + 1}`}
-                  className="rounded-xl w-full h-auto object-cover max-h-[400px]"
-                />
+                  href={img}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="block rounded-xl border border-white/10 bg-white/5 p-4 text-center hover:bg-white/10 transition"
+                >
+                  <span className="text-sm font-medium text-amber-300">📷 Ver Amostra {idx + 1}</span>
+                </a>
               ))}
             </div>
           </div>
