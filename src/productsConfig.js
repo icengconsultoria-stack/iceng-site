@@ -72,13 +72,11 @@ export const productsWithPreview = [
   },
 ]
 
-// Função para obter produto com preview
 export function getProductWithPreview(productId) {
   return productsWithPreview.find((p) => p.id === productId)
 }
 
-// Função para verificar se preview existe
 export function hasPreview(productId) {
   const product = getProductWithPreview(productId)
-  return product && product.previewUrl
+  return Boolean(product?.previewImages?.length)
 }
