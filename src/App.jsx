@@ -297,14 +297,16 @@ function PreviewModal({ product, onClose }) {
         </div>
 
         {product.previewType === 'pdf' && (
-          <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-            <embed
-              src={product.previewUrl}
-              type="application/pdf"
-              className="h-[600px] w-full rounded-xl"
-              title={product.previewTitle}
-              style={{ border: 'none' }}
-            />
+          <div className="rounded-2xl border border-white/10 bg-white/5 p-4 text-center py-12">
+            <p className="text-slate-300 mb-4">Clique no botão abaixo para visualizar a amostra em PDF</p>
+            <a
+              href={product.previewUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-2xl bg-blue-500 px-6 py-3 font-semibold text-white transition hover:bg-blue-600"
+            >
+              📄 Abrir PDF
+            </a>
           </div>
         )}
 
