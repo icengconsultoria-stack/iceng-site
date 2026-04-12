@@ -1,3 +1,22 @@
+#produtos .group a,
+#produtos .group button,
+#servicos a[href*="wa.me"],
+#contato a[href*="wa.me"],
+#contato a[href*="instagram.com"],
+a.fixed[href*="wa.me"] {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+#produtos .group a,
+#produtos .group button {
+  min-height: 3rem !important;
+  position: relative;
+  z-index: 2;
+}
+
 @media (max-width: 1023px) {
   header > div {
     flex-wrap: wrap;
