@@ -1,5 +1,5 @@
 const previewUrlByTitle = {
-  '18 Procedimentos Operacionais': '/previews/v3-po-kit.html',
+  '18 Procedimentos Operacionais': '/previews/v6-po-kit.html',
   'Kit Instruções de Trabalho': '/previews/v3-its-kit.html',
   'Kit SST': '/previews/v6-sst-kit.html',
   'Kit ITs + Manual da Qualidade': '/previews/v3-its-mq-kit.html',
