@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "iceng-site",
+      "runtimeExecutable": "C:\\temp\\vite_dev.bat",
+      "runtimeArgs": [],
+      "port": 5173
+    }
+  ]
+}
