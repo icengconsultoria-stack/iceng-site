@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Serviços de Engenharia e Consultoria | ICENG Consultoria</title>
+    <meta
+      name="description"
+      content="Conheça os serviços da ICENG Consultoria: SGQ, ISO 9001, PBQP-H, vistoria de imóveis, orçamentos de obras e apoio documental para PCI Caixa."
+    />
+    <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+    <link rel="canonical" href="https://www.icengconsultoria.com.br/servicos/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="ICENG Consultoria" />
+    <meta property="og:title" content="Serviços de Engenharia e Consultoria | ICENG Consultoria" />
+    <meta
+      property="og:description"
+      content="Página com os principais serviços da ICENG Consultoria, com foco em gestão, conformidade, vistorias, orçamentos e apoio técnico especializado."
+    />
+    <meta property="og:url" content="https://www.icengconsultoria.com.br/servicos/" />
+    <meta property="og:image" content="https://www.icengconsultoria.com.br/logo-iceng.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Serviços de Engenharia e Consultoria | ICENG Consultoria" />
+    <meta
+      name="twitter:description"
+      content="Conheça os principais serviços técnicos e de consultoria oferecidos pela ICENG."
+    />
+    <meta name="twitter:image" content="https://www.icengconsultoria.com.br/logo-iceng.png" />
+    <link rel="icon" href="/favicon.svg" />
+    <style>
+      :root {
+        --bg: #06101f;
+        --bg-soft: #0b172a;
+        --panel: rgba(255, 255, 255, 0.06);
+        --line: rgba(255, 255, 255, 0.12);
+        --text: #f8fafc;
+        --muted: #cbd5e1;
+        --accent: #f6c453;
+        --accent-dark: #d8a32e;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(245, 158, 11, 0.16), transparent 24%),
+          radial-gradient(circle at top right, rgba(59, 130, 246, 0.18), transparent 26%),
+          linear-gradient(180deg, #07111f 0%, #081527 38%, #06101f 100%);
+        line-height: 1.65;
+      }
+      a { color: inherit; text-decoration: none; }
+      .container { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+      .topbar {
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(14px);
+        background: rgba(6, 16, 31, 0.78);
+        border-bottom: 1px solid var(--line);
+      }
+      .topbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 16px 0;
+      }
+      .brand { display: flex; align-items: center; gap: 12px; }
+      .brand img { height: 52px; width: auto; }
+      .brand span { font-weight: 700; letter-spacing: 0.03em; }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 14px 20px;
+        border-radius: 16px;
+        font-weight: 700;
+        transition: 0.2s ease;
+      }
+      .btn-primary { background: var(--accent); color: #08111f; }
+      .btn-primary:hover { background: #ffd56d; }
+      .btn-secondary {
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+      }
+      .btn-secondary:hover { background: rgba(255, 255, 255, 0.08); }
+      .hero { padding: 72px 0 28px; }
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        border: 1px solid rgba(246, 196, 83, 0.32);
+        background: rgba(246, 196, 83, 0.1);
+        color: var(--accent);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+      h1 {
+        margin: 18px 0 0;
+        max-width: 900px;
+        font-size: clamp(2.2rem, 6vw, 4.2rem);
+        line-height: 1.08;
+      }
+      .lead {
+        margin: 22px 0 0;
+        max-width: 860px;
+        font-size: 1.1rem;
+        color: var(--muted);
+      }
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 30px;
+      }
+      .grid {
+        display: grid;
+        gap: 22px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        margin: 34px 0 56px;
+      }
+      .card {
+        padding: 26px;
+        border: 1px solid var(--line);
+        border-radius: 26px;
+        background: var(--panel);
+        backdrop-filter: blur(12px);
+      }
+      .card h2 {
+        margin: 0;
+        font-size: 1.45rem;
+      }
+      .card p {
+        margin: 14px 0 0;
+        color: var(--muted);
+      }
+      .card a {
+        display: inline-flex;
+        margin-top: 18px;
+        color: var(--accent);
+        font-weight: 700;
+      }
+      .section {
+        padding: 0 0 70px;
+      }
+      .section-box {
+        padding: 28px;
+        border-radius: 28px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.04);
+      }
+      .section-box h3 { margin-top: 0; font-size: 1.8rem; }
+      .checklist {
+        display: grid;
+        gap: 12px;
+        margin: 18px 0 0;
+        padding: 0;
+        list-style: none;
+      }
+      .checklist li {
+        padding: 14px 16px;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.04);
+        color: var(--muted);
+      }
+      footer {
+        padding: 0 0 40px;
+        color: #94a3b8;
+        font-size: 0.95rem;
+      }
+      @media (max-width: 720px) {
+        .topbar-inner { flex-direction: column; align-items: stretch; }
+        .brand { justify-content: center; }
+        .actions .btn { width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <a class="brand" href="/">
+          <img src="/logo-iceng.png" alt="ICENG Consultoria" />
+          <span>ICENG Consultoria</span>
+        </a>
+        <a class="btn btn-primary" href="https://wa.me/5575991438777" target="_blank" rel="noreferrer">Falar no WhatsApp</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="badge">Página de serviços</div>
+          <h1>Serviços de engenharia, consultoria e apoio técnico com foco em organização, conformidade e resultado.</h1>
+          <p class="lead">
+            A ICENG atua com soluções aplicadas à engenharia e à gestão, reunindo serviços voltados a sistemas de qualidade, vistorias,
+            orçamentos e apoio documental. Esta página organiza as principais frentes de atuação para facilitar sua busca no Google e o seu contato.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="https://wa.me/5575991438777" target="_blank" rel="noreferrer">Solicitar atendimento</a>
+            <a class="btn btn-secondary" href="/">Voltar ao site principal</a>
+          </div>
+
+          <div class="grid">
+            <article class="card">
+              <h2>Consultoria SGQ, ISO 9001 e PBQP-H</h2>
+              <p>Estruturação e organização do sistema de gestão da qualidade com foco em padronização, documentos, processos e melhoria contínua.</p>
+              <a href="/consultoria-sgq-iso-9001-pbqp-h/">Saiba mais</a>
+            </article>
+            <article class="card">
+              <h2>Vistoria de imóveis</h2>
+              <p>Vistorias técnicas com registro de não conformidades e apoio profissional para decisões com mais segurança.</p>
+              <a href="/vistoria-de-imoveis/">Saiba mais</a>
+            </article>
+            <article class="card">
+              <h2>Orçamentos de obras</h2>
+              <p>Levantamentos e orçamentos com visão técnica para apoiar viabilidade, planejamento, contratação e controle da obra.</p>
+              <a href="/orcamentos-de-obras/">Saiba mais</a>
+            </article>
+            <article class="card">
+              <h2>Montagem de PCI Caixa</h2>
+              <p>Apoio documental e organização técnica para demandas relacionadas à PCI, com foco em clareza, conferência e encaminhamento.</p>
+              <a href="/montagem-pci-caixa/">Saiba mais</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container section-box">
+          <h3>Por que esta estrutura ajuda no Google</h3>
+          <ul class="checklist">
+            <li>Cada serviço passa a ter uma URL própria, com título e descrição específicos para facilitar a leitura do Google.</li>
+            <li>As páginas aumentam a cobertura do site para buscas mais detalhadas, inclusive pesquisas por tipo de serviço.</li>
+            <li>O visitante encontra uma explicação mais objetiva e uma rota de contato mais rápida, o que melhora a conversão.</li>
+            <li>Essas URLs podem ser enviadas para indexação individualmente no Google Search Console.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">© ICENG Consultoria — Engenharia, vistorias técnicas, orçamentos e apoio documental.</div>
+    </footer>
+  </body>
+</html>
