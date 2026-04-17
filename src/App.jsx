@@ -457,7 +457,7 @@ function ProductPreviewModal({ product, onClose }) {
               <a
                 href={product.url}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-5 py-3 font-bold text-slate-950 transition hover:bg-amber-300"
               >
                 {product.buttonLabel}
@@ -466,7 +466,7 @@ function ProductPreviewModal({ product, onClose }) {
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-5 py-3 text-sm text-white transition hover:bg-white/10"
               >
                 Tirar dúvidas no WhatsApp
@@ -666,7 +666,7 @@ export default function App() {
                     <a
                       href={WHATSAPP_URL}
                       target="_blank"
-                      rel="noreferrer"
+                      rel="noopener noreferrer"
                       className="mt-6 inline-flex items-center justify-center rounded-2xl bg-white/10 px-4 py-3 text-white transition hover:bg-white/15"
                     >
                       {cta}
@@ -725,7 +725,7 @@ export default function App() {
                         <a
                           href={url}
                           target="_blank"
-                          rel="noreferrer"
+                          rel="noopener noreferrer"
                           className="flex flex-1 items-center justify-center rounded-2xl bg-amber-400 px-4 py-3 font-medium text-slate-950 transition hover:bg-amber-300"
                         >
                           {buttonLabel}
@@ -743,7 +743,7 @@ export default function App() {
             <a
               href={DEFAULT_HOTMART_URL}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-7 py-3 text-white transition hover:bg-white/10"
             >
               Ir para o kit completo
@@ -951,7 +951,7 @@ export default function App() {
                   <a
                     href={WHATSAPP_URL}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center rounded-2xl bg-amber-400 px-7 py-3 text-base font-bold text-slate-950 transition hover:bg-amber-300"
                   >
                     Falar no WhatsApp
@@ -960,7 +960,7 @@ export default function App() {
                   <a
                     href={INSTAGRAM_URL}
                     target="_blank"
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center rounded-2xl border border-white/15 bg-white/5 px-7 py-3 text-base text-white transition hover:bg-white/10"
                   >
                     Ver Instagram
