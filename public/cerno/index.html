@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CERNO | Gestão de obras pelo WhatsApp</title>
+  <meta name="description" content="CERNO transforma mensagens, comprovantes, pedidos e entregas do WhatsApp em controle para obras, compras, financeiro e gestão." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.icengconsultoria.com.br/cerno/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CERNO | Gestão de obras pelo WhatsApp" />
+  <meta property="og:description" content="Sua equipe continua no WhatsApp. O CERNO transforma conversas, comprovantes e entregas em informação clara para a gestão da obra." />
+  <meta property="og:url" content="https://www.icengconsultoria.com.br/cerno/" />
+  <meta property="og:site_name" content="ICENG Consultoria" />
+  <meta name="theme-color" content="#07111f" />
+  <style>
+    :root {
+      --bg: #06101f;
+      --bg2: #091a2e;
+      --card: rgba(255,255,255,.055);
+      --card2: rgba(255,255,255,.085);
+      --line: rgba(245, 158, 11, .38);
+      --gold: #f4b84a;
+      --gold2: #ffd98a;
+      --green: #52c878;
+      --orange: #ff8a1f;
+      --red: #ff4d3d;
+      --blue: #5ca8ff;
+      --text: #f8fafc;
+      --muted: #b8c2d3;
+      --muted2: #7d8aa0;
+      --shadow: 0 24px 80px rgba(0,0,0,.38);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(244,184,74,.16), transparent 26%),
+        radial-gradient(circle at 88% 6%, rgba(92,168,255,.13), transparent 25%),
+        linear-gradient(180deg, #06101f 0%, #071425 42%, #040b15 100%);
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
+    .grid-bg {
+      position: fixed; inset: 0; pointer-events: none; opacity: .34;
+      background-image:
+        linear-gradient(rgba(244,184,74,.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(244,184,74,.08) 1px, transparent 1px);
+      background-size: 58px 58px;
+      mask-image: radial-gradient(circle at 80% 20%, black, transparent 48%);
+    }
+    header {
+      position: sticky; top: 0; z-index: 20;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      background: rgba(6,16,31,.78);
+      backdrop-filter: blur(18px);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 16px 0; }
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .seal {
+      width: 46px; height: 46px; border-radius: 16px;
+      display: grid; place-items: center;
+      color: #07111f; font-weight: 900; font-size: 21px;
+      background: linear-gradient(135deg, var(--gold2), var(--gold));
+      box-shadow: 0 0 32px rgba(244,184,74,.28);
+    }
+    .brand b { display: block; letter-spacing: .08em; font-size: 20px; }
+    .brand span { display: block; color: var(--gold); font-size: 11px; font-weight: 800; letter-spacing: .22em; text-transform: uppercase; }
+    .navlinks { display: flex; gap: 18px; align-items: center; color: var(--muted); font-size: 14px; }
+    .navlinks a:hover { color: white; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 14px 20px; border-radius: 16px;
+      font-weight: 800; border: 1px solid rgba(255,255,255,.14);
+      transition: transform .2s, background .2s, box-shadow .2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { color: #06101f; background: linear-gradient(135deg, var(--gold2), var(--gold)); box-shadow: 0 16px 40px rgba(244,184,74,.23); }
+    .btn-ghost { background: rgba(255,255,255,.06); color: white; }
+    .hero { padding: 74px 0 48px; position: relative; }
+    .hero-grid { display: grid; grid-template-columns: 1.02fr .98fr; gap: 42px; align-items: center; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 8px 12px; border-radius: 999px;
+      border: 1px solid rgba(244,184,74,.32); background: rgba(244,184,74,.09);
+      color: var(--gold2); font-weight: 900; font-size: 12px; text-transform: uppercase; letter-spacing: .18em;
+    }
+    h1 { margin: 22px 0 0; font-size: clamp(42px, 6vw, 76px); line-height: .96; letter-spacing: -0.055em; }
+    .gold { color: var(--gold); text-shadow: 0 0 26px rgba(244,184,74,.2); }
+    .lead { margin: 22px 0 0; max-width: 660px; color: var(--muted); font-size: 20px; line-height: 1.65; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+    .trust { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 26px; }
+    .trust div { padding: 13px; border: 1px solid rgba(255,255,255,.09); background: rgba(255,255,255,.045); border-radius: 18px; color: var(--muted); font-size: 13px; }
+    .trust strong { display:block; color: white; font-size: 15px; margin-bottom: 3px; }
+    .visual { position: relative; min-height: 620px; }
+    .phone {
+      position: absolute; left: 0; top: 22px; width: 310px; height: 585px;
+      border-radius: 44px; padding: 15px; background: linear-gradient(135deg, #f6c45e, #332007 30%, #f6c45e 50%, #080f18 78%);
+      box-shadow: var(--shadow), 0 0 46px rgba(244,184,74,.24); transform: rotate(-3deg);
+    }
+    .phone-screen { height: 100%; border-radius: 32px; background: #0b1725; overflow: hidden; border: 1px solid rgba(255,255,255,.12); }
+    .wa-head { background: #092b26; padding: 15px; display: flex; gap: 10px; align-items: center; }
+    .circle { width: 34px; height: 34px; border-radius: 50%; display:grid; place-items:center; background:#16845e; font-weight:900; }
+    .wa-title b { display:block; font-size: 13px; } .wa-title span { color:#bbd1c8; font-size: 11px; }
+    .chat { padding: 14px; display: grid; gap: 12px; }
+    .bubble { background: #e8e0d1; color:#1c2938; border-radius: 12px; padding: 12px; font-size: 14px; line-height: 1.35; box-shadow: 0 4px 14px rgba(0,0,0,.2); }
+    .bubble small { color:#596272; float:right; margin-left: 8px; }
+    .name { color:#15845f; display:block; font-weight:900; margin-bottom:5px; }
+    .name.blue { color:#3159ba; } .name.purple { color:#6d4ec8; }
+    .receipt { margin-top: 8px; background:#fff; border:1px solid #b8b8b8; padding:9px; border-radius:6px; font-size:11px; color:#263342; }
+    .receipt div { display:flex; justify-content:space-between; gap:12px; border-bottom: 1px solid #e6e6e6; padding: 3px 0; }
+    .input { margin: 4px 12px 0; padding: 13px 14px; border-radius:999px; background:#1b2938; color:#9aa8b9; font-size:13px; display:flex; justify-content:space-between; }
+    .flow { position:absolute; left: 300px; top: 160px; width: 170px; height: 300px; opacity:.95; }
+    .flow::before { content:""; position:absolute; inset:0; background: repeating-radial-gradient(ellipse at left, rgba(244,184,74,.64) 0 1px, transparent 2px 10px); filter: blur(.2px); opacity:.8; }
+    .node { position:absolute; right: 20px; width:48px; height:48px; border-radius:50%; border:1px solid var(--line); display:grid; place-items:center; background: rgba(6,16,31,.78); box-shadow:0 0 24px rgba(244,184,74,.2); color:var(--gold); }
+    .node:nth-child(1){top:0}.node:nth-child(2){top:66px}.node:nth-child(3){top:132px}.node:nth-child(4){top:198px}
+    .arrow { position:absolute; left: 452px; top: 300px; color: var(--gold2); font-size: 46px; text-shadow: 0 0 22px rgba(244,184,74,.5); }
+    .dashboard { position:absolute; right:0; top: 70px; width: 500px; display:grid; gap:18px; }
+    .panel {
+      border: 1px solid var(--line); background: rgba(8,22,37,.82); border-radius: 24px;
+      box-shadow: var(--shadow), inset 0 0 34px rgba(244,184,74,.05);
+      padding: 22px;
+    }
+    .panel h3 { margin:0 0 18px; color: var(--gold); font-size: 21px; letter-spacing:.02em; display:flex; gap:10px; align-items:center; }
+    .data { display:grid; gap:12px; }
+    .row { display:grid; grid-template-columns: 145px 1fr; gap: 10px; color: var(--muted); font-size:16px; }
+    .row strong { color:white; } .ok { color: var(--green)!important; } .warn { color: var(--orange)!important; } .bad { color: var(--red)!important; }
+    .pill { display:inline-flex; width:fit-content; padding: 5px 9px; border-radius: 8px; border:1px solid currentColor; background: rgba(255,255,255,.04); font-weight:800; }
+    .metrics { display:grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 26px; }
+    .metric { border:1px solid rgba(244,184,74,.25); background: rgba(255,255,255,.045); border-radius: 20px; padding: 18px; min-height:105px; }
+    .metric span { color: var(--muted); font-size: 13px; display:block; } .metric b { font-size: 28px; color: var(--green); } .metric b.orange { color:var(--orange); } .metric b.blue { color:var(--blue); }
+    section { padding: 74px 0; }
+    .section-title { max-width: 760px; margin-bottom: 28px; }
+    .center { text-align:center; margin-left:auto; margin-right:auto; }
+    h2 { font-size: clamp(31px, 4vw, 52px); line-height:1.05; margin: 12px 0 0; letter-spacing:-.04em; }
+    .section-title p { color: var(--muted); font-size:18px; line-height:1.65; }
+    .cards { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card { border:1px solid rgba(255,255,255,.1); background: var(--card); border-radius: 24px; padding: 24px; box-shadow: 0 18px 60px rgba(0,0,0,.18); }
+    .card h3 { margin: 14px 0 8px; font-size: 22px; } .card p, .card li { color: var(--muted); line-height:1.6; } .card ul { padding-left: 18px; margin-bottom:0; }
+    .icon { width: 48px; height:48px; display:grid; place-items:center; border-radius:16px; color:var(--gold); background: rgba(244,184,74,.1); border:1px solid rgba(244,184,74,.25); font-size: 23px; }
+    .steps { display:grid; gap: 14px; }
+    .step { display:grid; grid-template-columns: 74px 1fr; gap: 18px; align-items:start; border:1px solid rgba(255,255,255,.1); background: var(--card); border-radius: 24px; padding:22px; }
+    .num { width: 54px; height:54px; border-radius:16px; display:grid; place-items:center; background: linear-gradient(135deg, var(--gold2), var(--gold)); color:#06101f; font-weight: 950; }
+    .step h3 { margin:0 0 6px; font-size:22px; } .step p { margin:0; color:var(--muted); line-height:1.65; }
+    .offer { border:1px solid var(--line); background: linear-gradient(135deg, rgba(244,184,74,.12), rgba(255,255,255,.045)); border-radius:34px; padding:36px; box-shadow: var(--shadow); display:grid; grid-template-columns: 1.1fr .9fr; gap: 26px; align-items:center; }
+    .offer h2 { margin-top:0; } .offer p { color:var(--muted); line-height:1.65; font-size:18px; }
+    .checklist { display:grid; gap: 12px; }
+    .check { display:flex; gap:10px; align-items:flex-start; color:var(--muted); } .check b { color:white; }
+    .price { border:1px solid rgba(255,255,255,.12); background: rgba(0,0,0,.18); border-radius:24px; padding:24px; }
+    .price strong { display:block; color:var(--gold); font-size:14px; letter-spacing:.15em; text-transform:uppercase; }
+    .price h3 { margin:10px 0; font-size:32px; }
+    .faq { display:grid; gap:12px; max-width: 900px; margin: 28px auto 0; }
+    details { border:1px solid rgba(255,255,255,.1); background:var(--card); border-radius:20px; padding:18px 20px; }
+    summary { cursor:pointer; font-weight:850; font-size:18px; } details p { color:var(--muted); line-height:1.65; }
+    footer { padding: 44px 0; border-top:1px solid rgba(255,255,255,.08); color:var(--muted); }
+    .footer-inner { display:flex; justify-content:space-between; gap:20px; align-items:center; }
+    .mobile-only { display:none; }
+    @media (max-width: 980px) {
+      .navlinks { display:none; }
+      .hero-grid, .offer { grid-template-columns:1fr; }
+      .visual { min-height: auto; display:grid; gap:18px; }
+      .phone, .dashboard, .flow, .arrow { position:relative; left:auto; right:auto; top:auto; width:100%; transform:none; }
+      .phone { width:min(360px,100%); margin:auto; }
+      .flow, .arrow { display:none; }
+      .dashboard { width:100%; }
+      .cards { grid-template-columns:1fr; }
+      .metrics, .trust { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 560px) {
+      .brand b { font-size:16px; } .brand span { font-size:9px; }
+      .nav .btn { display:none; }
+      .hero { padding-top: 44px; }
+      h1 { font-size: 43px; }
+      .lead { font-size:17px; }
+      .metrics, .trust { grid-template-columns:1fr; }
+      .row { grid-template-columns:1fr; gap:2px; }
+      .step { grid-template-columns:1fr; }
+      .footer-inner { flex-direction:column; align-items:flex-start; }
+      .mobile-only { display:inline-flex; }
+    }
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/">
+        <div class="seal">C</div>
+        <div><b>CERNO</b><span>ICENG Consultoria</span></div>
+      </a>
+      <nav class="navlinks">
+        <a href="#problema">Problema</a>
+        <a href="#funciona">Como funciona</a>
+        <a href="#modulos">Módulos</a>
+        <a href="#piloto">Piloto</a>
+        <a href="#faq">Dúvidas</a>
+      </nav>
+      <a class="btn btn-primary" href="https://wa.me/5575991438777?text=Quero%20ver%20o%20CERNO%20aplicado%20na%20minha%20obra" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Gestão de obras pelo WhatsApp</div>
+          <h1>Sua equipe continua no WhatsApp. <span class="gold">O CERNO organiza para a gestão.</span></h1>
+          <p class="lead">O CERNO transforma mensagens, comprovantes, pedidos e entregas que já circulam nos grupos da obra em uma visão clara para compras, financeiro e gestão.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://wa.me/5575991438777?text=Quero%20ver%20uma%20demonstra%C3%A7%C3%A3o%20do%20CERNO" target="_blank" rel="noopener">Quero uma demonstração</a>
+            <a class="btn btn-ghost" href="#piloto">Entender o piloto</a>
+          </div>
+          <div class="trust">
+            <div><strong>Sem mudar a rotina</strong>Equipe segue usando os grupos.</div>
+            <div><strong>Mais rastreabilidade</strong>Obra, fornecedor, pedido e valor.</div>
+            <div><strong>Alertas de conferência</strong>OC, comprovante e duplicidades.</div>
+            <div><strong>Visão do gestor</strong>Resumo claro para decisão.</div>
+          </div>
+        </div>
+
+        <div class="visual" aria-label="Demonstração visual do CERNO">
+          <div class="phone">
+            <div class="phone-screen">
+              <div class="wa-head"><div class="circle">O</div><div class="wa-title"><b>Obra Recife - Pagamentos</b><span>Grupo · 12 participantes</span></div></div>
+              <div class="chat">
+                <div class="bubble"><span class="name">Juliana - Compras</span>Segue comprovante do fornecedor Hidráulica Sul <small>08:33</small><div class="receipt"><div><span>Fornecedor</span><b>Hidráulica Sul</b></div><div><span>Valor</span><b>R$ 2.200,00</b></div><div><span>Pedido</span><b>518</b></div><div><span>Data</span><b>22/05/2025</b></div></div></div>
+                <div class="bubble"><span class="name blue">Rafael - Financeiro</span>Ainda falta a OC desse pagamento <small>08:35</small></div>
+                <div class="bubble"><span class="name purple">Marcos - Suprimentos</span>Pedido 518 aprovado <small>08:36</small></div>
+              </div>
+              <div class="input">Mensagem <span>🎙️</span></div>
+            </div>
+          </div>
+          <div class="flow"><div class="node">📄</div><div class="node">🔎</div><div class="node">🧾</div><div class="node">⚠️</div></div>
+          <div class="arrow">→</div>
+          <div class="dashboard">
+            <div class="panel">
+              <h3>🧠 Conferência automatizada</h3>
+              <div class="data">
+                <div class="row"><span>Fornecedor:</span><strong class="ok">Hidráulica Sul</strong></div>
+                <div class="row"><span>Comprovante:</span><strong class="pill ok">Recebido</strong></div>
+                <div class="row"><span>OC:</span><strong class="pill bad">Não localizada</strong></div>
+                <div class="row"><span>Valor:</span><strong class="ok">R$ 2.200,00</strong></div>
+                <div class="row"><span>Status:</span><strong class="pill warn">Aguardando vínculo</strong></div>
+              </div>
+            </div>
+            <div class="panel">
+              <h3>🔔 Alertas de gestão</h3>
+              <div class="data">
+                <div class="row"><span>Sem OC:</span><strong class="warn">4 comprovantes</strong></div>
+                <div class="row"><span>Sem comprovante:</span><strong class="warn">2 pedidos</strong></div>
+                <div class="row"><span>Duplicidade:</span><strong class="blue">1 análise</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrap metrics">
+        <div class="metric"><span>Comprovantes recebidos</span><b>34</b></div>
+        <div class="metric"><span>Conferidos</span><b>28</b></div>
+        <div class="metric"><span>Pendentes</span><b class="orange">6</b></div>
+        <div class="metric"><span>Duplicidades evitadas</span><b class="blue">2</b></div>
+      </div>
+    </section>
+
+    <section id="problema">
+      <div class="wrap">
+        <div class="section-title center">
+          <div class="eyebrow">O problema real</div>
+          <h2>O WhatsApp virou o escritório invisível da obra.</h2>
+          <p>O problema não é a equipe usar WhatsApp. O problema é a gestão não enxergar com clareza o que acontece dentro dele.</p>
+        </div>
+        <div class="cards">
+          <div class="card"><div class="icon">💸</div><h3>Comprovantes soltos</h3><p>Pagamentos chegam no grupo, mas depois falta saber obra, pedido, OC, fornecedor, valor e status de conferência.</p></div>
+          <div class="card"><div class="icon">🚚</div><h3>Entregas espalhadas</h3><p>Material é confirmado por mensagem, mas a informação não vira rastreio de recebimento, atraso ou pendência.</p></div>
+          <div class="card"><div class="icon">⚠️</div><h3>Gestor sem visão</h3><p>O dono precisa procurar conversa, pedir confirmação e cruzar informação manualmente para entender o que aconteceu.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="funciona">
+      <div class="wrap">
+        <div class="section-title">
+          <div class="eyebrow">Como funciona</div>
+          <h2>Da conversa do grupo para uma visão prática de gestão.</h2>
+          <p>O CERNO atua como uma camada de inteligência sobre a rotina que a equipe já usa.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="num">01</div><div><h3>A equipe continua no grupo</h3><p>Compras, financeiro, almoxarifado e obra seguem enviando mensagens, comprovantes, pedidos e confirmações no WhatsApp.</p></div></div>
+          <div class="step"><div class="num">02</div><div><h3>O CERNO identifica as informações importantes</h3><p>Fornecedor, valor, obra, pedido, OC, comprovante, entrega, vencimento e status de conferência passam a ser organizados.</p></div></div>
+          <div class="step"><div class="num">03</div><div><h3>O sistema cruza e aponta pendências</h3><p>Comprovante sem OC, pedido sem comprovante, material sem confirmação, duplicidade e inconsistências aparecem como alertas.</p></div></div>
+          <div class="step"><div class="num">04</div><div><h3>O gestor recebe clareza para decidir</h3><p>A empresa passa a enxergar o que foi pago, o que chegou, o que está pendente e o que precisa de revisão.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="modulos">
+      <div class="wrap">
+        <div class="section-title center">
+          <div class="eyebrow">Módulos comerciais</div>
+          <h2>O CERNO começa simples e cresce com a operação.</h2>
+          <p>O piloto pode iniciar por uma obra e evoluir para uma operação com várias obras, compras, financeiro e diretoria.</p>
+        </div>
+        <div class="cards">
+          <div class="card"><div class="icon">🧾</div><h3>Pagamentos</h3><ul><li>Comprovantes recebidos</li><li>Valor pago e fornecedor</li><li>Pedido, OC e obra vinculada</li><li>Alertas de pendência</li></ul></div>
+          <div class="card"><div class="icon">📦</div><h3>Pedidos e entregas</h3><ul><li>Pedidos aprovados</li><li>Materiais recebidos</li><li>Entregas pendentes</li><li>Itens atrasados</li></ul></div>
+          <div class="card"><div class="icon">📊</div><h3>Painel do gestor</h3><ul><li>Resumo diário da obra</li><li>Rastreio por fornecedor</li><li>Duplicidades em análise</li><li>Decisão com contexto</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="piloto">
+      <div class="wrap">
+        <div class="offer">
+          <div>
+            <div class="eyebrow">Oferta de entrada</div>
+            <h2>Piloto CERNO em uma obra real.</h2>
+            <p>A melhor forma de vender o CERNO é mostrar funcionando com a rotina real da empresa. Por isso, a entrada ideal é um piloto controlado em uma obra.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="https://wa.me/5575991438777?text=Quero%20rodar%20um%20piloto%20do%20CERNO%20em%20uma%20obra" target="_blank" rel="noopener">Solicitar piloto</a>
+              <a class="btn btn-ghost" href="https://wa.me/5575991438777?text=Quero%20um%20diagn%C3%B3stico%20da%20minha%20rotina%20de%20obra%20no%20WhatsApp" target="_blank" rel="noopener">Pedir diagnóstico</a>
+            </div>
+          </div>
+          <div class="price">
+            <strong>O que o cliente vê no piloto</strong>
+            <h3>7 a 15 dias</h3>
+            <div class="checklist">
+              <div class="check">✅ <span><b>Leitura da rotina:</b> mensagens, comprovantes, pedidos e entregas.</span></div>
+              <div class="check">✅ <span><b>Organização por obra:</b> fornecedor, valor, status e pendências.</span></div>
+              <div class="check">✅ <span><b>Relatório final:</b> o que foi pago, entregue, pendente e precisa de atenção.</span></div>
+              <div class="check">✅ <span><b>Próximo passo:</b> proposta de implantação mensal por obra ou multiobras.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="wrap">
+        <div class="section-title center">
+          <div class="eyebrow">Dúvidas comuns</div>
+          <h2>O cliente não precisa entender tecnologia para usar.</h2>
+          <p>A proposta é simplificar a gestão sem bagunçar a rotina da equipe.</p>
+        </div>
+        <div class="faq">
+          <details open><summary>Preciso parar de usar WhatsApp?</summary><p>Não. A força do CERNO é justamente aproveitar a rotina que a equipe já tem. O sistema organiza a informação que circula no grupo.</p></details>
+          <details><summary>O CERNO substitui o financeiro ou o comprador?</summary><p>Não. Ele apoia a conferência e entrega contexto para a equipe decidir melhor, com menos busca manual e menos risco de informação perdida.</p></details>
+          <details><summary>Consigo testar em apenas uma obra?</summary><p>Sim. O caminho recomendado é iniciar por uma obra, validar o ganho de clareza e depois ampliar para outras frentes.</p></details>
+          <details><summary>Quais informações o CERNO pode organizar?</summary><p>Comprovantes, pedidos, fornecedores, valores, obras, OCs, entregas, pendências, vencimentos, duplicidades e alertas de conferência.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <div><strong>CERNO · ICENG Consultoria</strong><br />Gestão de obras pelo WhatsApp.</div>
+      <div class="cta-row" style="margin:0">
+        <a class="btn btn-ghost" href="/">Voltar para ICENG</a>
+        <a class="btn btn-primary" href="https://wa.me/5575991438777?text=Quero%20entender%20como%20o%20CERNO%20funciona" target="_blank" rel="noopener">Me chama no WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
