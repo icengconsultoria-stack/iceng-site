@@ -65,6 +65,7 @@ const products = [
     id: 'cerno',
     icon: Building2,
     badge: 'Novo',
+    coverImage: '/capas/capa_cerno.jpeg',
     title: 'CERNO',
     subtitle: 'Gestão Financeira de Obras',
     description:
@@ -813,6 +814,26 @@ export default function App() {
             </div>
             <h3 className="text-2xl font-bold text-white">Todos os kits com 80% de desconto</h3>
             <p className="mt-2 text-amber-200">Aproveite essa promoção especial de lançamento por tempo limitado</p>
+          </div>
+
+          <div className="mb-12 grid gap-5 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/30 bg-amber-300/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-amber-300">
+                Produto operacional ICENG
+              </div>
+              <h3 className="mt-4 text-2xl font-bold text-white md:text-3xl">CERNO organiza a rotina financeira da obra a partir do WhatsApp.</h3>
+              <p className="mt-3 leading-7 text-slate-300">
+                O CERNO foi criado para ajudar empresas de engenharia e construcao a transformar comprovantes, ordens de compra, boletos e mensagens dos grupos de obra em informacoes organizadas para conferencia, financeiro e gestao.
+              </p>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+              {['Leitura de comprovantes e ordens', 'Organizacao por obra e status', 'Apoio a conferencia financeira'].map((item) => (
+                <div key={item} className="flex items-center gap-3 rounded-2xl border border-white/10 bg-slate-950/30 px-4 py-3 text-sm text-slate-100">
+                  <CheckCircle2 className="h-5 w-5 shrink-0 text-amber-300" />
+                  <span>{item}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
