@@ -62,14 +62,16 @@ const services = [
 
 const products = [
   {
+    id: 'cerno',
     icon: Building2,
     badge: 'Novo',
     title: 'CERNO',
-    subtitle: 'Controle financeiro de obras',
+    subtitle: 'Gestão Financeira de Obras',
     description:
-      'Painel para organizar comprovantes, ordens, revisoes, relatorios e acompanhamento financeiro da obra com acesso do cliente.',
+      'Lê comprovantes, ordens de compra e boletos direto dos grupos de WhatsApp e organiza os pagamentos por obra automaticamente. Sem planilha manual, sem retrabalho.',
     url: 'https://cerno.icengconsultoria.com.br/degustacao',
-    buttonLabel: 'Experimentar gratis',
+    buttonLabel: 'Experimentar grátis',
+    tags: ['Obras', 'Financeiro', 'WhatsApp'],
     featured: true,
   },
   {
@@ -815,7 +817,7 @@ export default function App() {
 
           <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {products.map((product) => {
-              const { badge, coverImage, title, subtitle, description, url, buttonLabel, featured, preview } = product
+              const { badge, coverImage, title, subtitle, description, tags, url, buttonLabel, featured, preview } = product
               return (
                 <motion.div key={title} whileHover={{ y: -4 }} transition={{ duration: 0.2 }}>
                   <Card
@@ -851,6 +853,18 @@ export default function App() {
                         </div>
                         <h3 className="mt-2 text-2xl font-bold text-white">{title}</h3>
                         <p className="mt-3 flex-1 leading-7 text-slate-300">{description}</p>
+                        {tags && (
+                          <div className="mt-4 flex flex-wrap gap-2">
+                            {tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-slate-200"
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+                        )}
 
                         <div className="mt-6 flex gap-3">
                           {preview && (
