@@ -62,7 +62,19 @@ const services = [
 
 const products = [
   {
+    icon: Building2,
+    badge: 'Novo',
+    title: 'CERNO',
+    subtitle: 'Controle financeiro de obras',
+    description:
+      'Painel para organizar comprovantes, ordens, revisoes, relatorios e acompanhamento financeiro da obra com acesso do cliente.',
+    url: 'https://cerno.icengconsultoria.com.br/degustacao',
+    buttonLabel: 'Experimentar gratis',
+    featured: true,
+  },
+  {
     icon: FileText,
+    coverImage: '/capas/capa_18_procedimentos.png',
     title: '18 Procedimentos Operacionais',
     subtitle: 'SGQ ISO 9001:2015 / PBQP-H',
     description:
@@ -70,16 +82,37 @@ const products = [
     url: 'https://go.hotmart.com/S105270171H?dp=1',
     buttonLabel: 'Acessar produto',
     preview: {
-      capa: '/capas/capa_04_pos.png',
       docs: [
         { label: 'PO-001 — Controle de Documentos e Registros', img: '/docs/kit04_doc1.jpg' },
         { label: 'PO-007 — Requisitos Legais Aplicáveis', img: '/docs/kit04_doc2.jpg' },
         { label: 'PO-018 — Ações Corretivas e Preventivas', img: '/docs/kit04_doc3.jpg' },
       ],
+      contents: [
+        'PO-001 — Controle de Documentos e Registros',
+        'PO-002 — Controle de Registros',
+        'PO-003 — Análise Crítica pela Direção',
+        'PO-004 — Gestão de Recursos Humanos',
+        'PO-005 — Elaboração do Plano de Qualidade da Obra (PQO)',
+        'PO-006 — Análise Crítica de Contratos',
+        'PO-007 — Requisitos Legais Aplicáveis',
+        'PO-008 — Incorporação Imobiliária',
+        'PO-009 — Elaboração, Análise e Controle de Projetos',
+        'PO-010 — Controle de Materiais e Serviços',
+        'PO-011 — Execução e Controle da Produção',
+        'PO-012 — Inspeção e Ensaios de Serviços',
+        'PO-013 — Inspeção, Avaliação, Entrega e Satisfação',
+        'PO-014 — Assistência Técnica Pós-Entrega',
+        'PO-015 — Identificação e Rastreabilidade',
+        'PO-016 — Controle de Dispositivos de Medição',
+        'PO-017 — Auditorias Internas da Qualidade',
+        'PO-018 — Controle de Produto Não Conforme',
+        'Diversos Formulários e Modelos em Excel'
+      ],
     },
   },
   {
     icon: NotebookTabs,
+    coverImage: '/capas/capa_kit_its.png',
     title: 'Kit Instruções de Trabalho',
     subtitle: 'SGQ ISO 9001 / PBQP-H',
     description:
@@ -87,16 +120,22 @@ const products = [
     url: 'https://go.hotmart.com/V105270264E',
     buttonLabel: 'Acessar produto',
     preview: {
-      capa: '/capas/capa_05_its.png',
       docs: [
         { label: 'IT-HA-001 — Locação de Obra', img: '/docs/kit05_doc1.jpg' },
         { label: 'IT-HA-010 — Execução de Alvenaria Estrutural', img: '/docs/kit05_doc2.jpg' },
         { label: 'IT-IN-001 — Raspagem e Limpeza do Terreno', img: '/docs/kit05_doc3.jpg' },
       ],
+      contents: [
+        '40 Instruções de Trabalho — Habitacional',
+        '16 Instruções de Trabalho — Infraestrutura',
+        'IT-HA-001 a IT-HA-040 (Locação, Escavação, Alvenaria, Instalações, Acabamentos, etc.)',
+        'IT-IN-001 a IT-IN-016 (Infraestrutura, Pavimentação, Redes, etc.)',
+      ],
     },
   },
   {
     icon: ShieldCheck,
+    coverImage: '/capas/capa_kit_sst.png',
     title: 'Kit SST',
     subtitle: 'PCMAT · PCMSO · PPRA · PGR',
     description:
@@ -104,16 +143,22 @@ const products = [
     url: 'https://go.hotmart.com/H105270528Y',
     buttonLabel: 'Acessar produto',
     preview: {
-      capa: '/capas/capa_06_sst.png',
       docs: [
         { label: 'PCMAT — Programa de Cond. e Meio Ambiente do Trabalho', img: '/docs/kit06_doc1.jpg' },
         { label: 'PCMSO — Programa de Controle Médico de Saúde Ocupacional', img: '/docs/kit06_doc2.jpg' },
         { label: 'PGR — Programa de Gerenciamento de Riscos', img: '/docs/kit06_doc3.jpg' },
       ],
+      contents: [
+        'PCMAT — Programa de Condições e Meio Ambiente do Trabalho',
+        'PCMSO — Programa de Controle Médico de Saúde Ocupacional',
+        'PPRA — Programa de Prevenção de Riscos Ambientais',
+        'PGR — Programa de Gerenciamento de Riscos (Loteamento)',
+      ],
     },
   },
   {
     icon: ClipboardList,
+    coverImage: '/capas/capa_its_manual.png',
     title: 'Kit ITs + Manual da Qualidade',
     subtitle: 'SGQ ISO 9001 / PBQP-H',
     description:
@@ -121,16 +166,22 @@ const products = [
     url: 'https://go.hotmart.com/F105269835T',
     buttonLabel: 'Acessar produto',
     preview: {
-      capa: '/capas/capa_03_its_mq.png',
       docs: [
         { label: 'Manual da Qualidade ISO 9001:2015', img: '/docs/kit03_doc1.jpg' },
         { label: 'IT-HA-001 — Locação de Obra', img: '/docs/kit03_doc2.jpg' },
         { label: 'IT-IN-001 — Raspagem e Limpeza do Terreno', img: '/docs/kit03_doc3.jpg' },
       ],
+      contents: [
+        'Manual da Qualidade ISO 9001:2015 com Anexos',
+        '40 Instruções de Trabalho — Habitacional',
+        '16 Instruções de Trabalho — Infraestrutura',
+        'Modelos e Formulários de Gestão',
+      ],
     },
   },
   {
     icon: FolderKanban,
+    coverImage: '/capas/capa_sgq_completo.png',
     title: 'Kit SGQ Completo',
     subtitle: 'ISO 9001 e PBQP-H',
     description:
@@ -139,16 +190,24 @@ const products = [
     buttonLabel: 'Quero o kit completo',
     featured: true,
     preview: {
-      capa: '/capas/capa_01_completo.png',
       docs: [
         { label: 'Manual da Qualidade ISO 9001:2015', img: '/docs/kit01_doc1.jpg' },
         { label: 'PO-001 — Controle de Documentos e Registros', img: '/docs/kit01_doc2.jpg' },
         { label: 'IT-HA-001 — Locação de Obra', img: '/docs/kit01_doc3.jpg' },
       ],
+      contents: [
+        'Manual da Qualidade ISO 9001:2015',
+        '18 Procedimentos Operacionais (PO-001 a PO-018)',
+        '40 Instruções de Trabalho — Habitacional',
+        '16 Instruções de Trabalho — Infraestrutura',
+        '4 Programas SST (PCMAT, PCMSO, PPRA, PGR)',
+        'Diversos Formulários, Matrizes e Modelos em Excel',
+      ],
     },
   },
   {
     icon: BadgeCheck,
+    coverImage: '/capas/capa_sgq_premium.png',
     title: 'Kit SGQ Premium',
     subtitle: 'ISO 9001 e PBQP-H + Checklist',
     description:
@@ -157,11 +216,19 @@ const products = [
     buttonLabel: 'Quero o premium',
     featured: true,
     preview: {
-      capa: '/capas/capa_02_premium.png',
       docs: [
         { label: 'Manual da Qualidade ISO 9001:2015', img: '/docs/kit02_doc1.jpg' },
         { label: 'PO-001 — Controle de Documentos e Registros', img: '/docs/kit02_doc2.jpg' },
         { label: 'BONUS — Checklist de Implantação SGQ', img: '/docs/kit02_doc3.jpg' },
+      ],
+      contents: [
+        'Manual da Qualidade ISO 9001:2015',
+        '18 Procedimentos Operacionais (PO-001 a PO-018)',
+        '40 Instruções de Trabalho — Habitacional',
+        '16 Instruções de Trabalho — Infraestrutura',
+        '4 Programas SST (PCMAT, PCMSO, PPRA, PGR)',
+        'BONUS: Checklist Completo de Implantação',
+        'Diversos Formulários, Matrizes e Modelos em Excel',
       ],
     },
   },
@@ -317,6 +384,7 @@ function Button({ className = '', variant = 'default', size = 'default', asChild
 
 function ProductPreviewModal({ product, onClose }) {
   const [activeDoc, setActiveDoc] = useState(null)
+  const [showContents, setShowContents] = useState(false)
 
   useEffect(() => {
     const onKey = (e) => { if (e.key === 'Escape') onClose() }
@@ -330,9 +398,9 @@ function ProductPreviewModal({ product, onClose }) {
 
   if (!product?.preview) return null
 
-  const { capa, docs } = product.preview
-  const activeImg = activeDoc !== null ? docs[activeDoc].img : capa
-  const activeLabel = activeDoc !== null ? docs[activeDoc].label : `Capa — ${product.title}`
+  const { docs, contents } = product.preview
+  const activeImg = activeDoc !== null && docs ? docs[activeDoc].img : null
+  const activeLabel = activeDoc !== null && docs ? docs[activeDoc].label : `Conteúdo — ${product.title}`
 
   return (
     <div
@@ -380,25 +448,46 @@ function ProductPreviewModal({ product, onClose }) {
         {/* Body */}
         <div className="grid gap-0 md:grid-cols-[1.2fr_0.8fr]">
 
-          {/* Visualizador de imagem */}
-          <div className="flex flex-col border-r border-white/10">
-            <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden bg-black/40 p-4">
+          {/* Visualizador de conteúdo */}
+          <div className="flex flex-col border-r border-white/10 bg-black/20">
+            <div className="flex min-h-0 flex-1 items-center justify-center overflow-hidden p-6">
               <AnimatePresence mode="wait">
-                <motion.img
-                  key={activeImg}
-                  src={activeImg}
-                  alt={activeLabel}
-                  className="max-h-[60vh] w-full object-contain rounded-xl"
-                  initial={{ opacity: 0, scale: 0.97 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.97 }}
-                  transition={{ duration: 0.18 }}
-                />
+                {activeImg ? (
+                  <motion.img
+                    key={activeImg}
+                    src={activeImg}
+                    alt={activeLabel}
+                    className="max-h-[60vh] w-full object-contain rounded-xl"
+                    initial={{ opacity: 0, scale: 0.97 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.97 }}
+                    transition={{ duration: 0.18 }}
+                  />
+                ) : (
+                  <motion.div
+                    className="text-center"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    <div className="text-lg font-semibold text-amber-300 mb-4">Relação de Conteúdo</div>
+                    <ul className="space-y-2 text-left">
+                      {contents?.map((item, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm text-slate-200">
+                          <span className="text-amber-300 mt-1">✓</span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                )}
               </AnimatePresence>
             </div>
-            <div className="border-t border-white/10 px-4 py-2 text-center text-xs text-slate-500">
-              {activeLabel}
-            </div>
+            {activeImg && (
+              <div className="border-t border-white/10 px-4 py-2 text-center text-xs text-slate-500">
+                {activeLabel}
+              </div>
+            )}
           </div>
 
           {/* Info + docs */}
@@ -428,11 +517,11 @@ function ProductPreviewModal({ product, onClose }) {
                   <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-xs font-bold ${
                     activeDoc === null ? 'bg-amber-400 text-slate-950' : 'bg-white/10 text-slate-400'
                   }`}>
-                    ★
+                    📋
                   </span>
-                  <span className="leading-5">Capa do kit</span>
+                  <span className="leading-5">Conteúdo Completo</span>
                 </button>
-                {docs.map((doc, idx) => (
+                {docs && docs.map((doc, idx) => (
                   <button
                     key={idx}
                     onClick={() => setActiveDoc(idx)}
@@ -477,6 +566,32 @@ function ProductPreviewModal({ product, onClose }) {
       </motion.div>
     </div>
   )
+}
+
+function PromoCountdown() {
+  const [timeLeft, setTimeLeft] = useState('')
+
+  useEffect(() => {
+    const updateCountdown = () => {
+      const endDate = new Date('2026-05-31T23:59:59').getTime()
+      const now = new Date().getTime()
+      const diff = endDate - now
+
+      if (diff <= 0) {
+        setTimeLeft('Promoção encerrada')
+      } else {
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24))
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        setTimeLeft(`${days}d ${hours}h`)
+      }
+    }
+
+    updateCountdown()
+    const interval = setInterval(updateCountdown, 3600000) // atualiza a cada hora
+    return () => clearInterval(interval)
+  }, [])
+
+  return <span className="text-amber-300">{timeLeft}</span>
 }
 
 export default function App() {
@@ -689,48 +804,74 @@ export default function App() {
             center
           />
 
+          <div className="mt-8 mb-12 rounded-3xl border border-amber-400/30 bg-gradient-to-r from-amber-400/10 to-amber-400/5 p-6 text-center backdrop-blur-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-amber-400/10 px-4 py-2 mb-3">
+              <Sparkles className="h-4 w-4 text-amber-300" />
+              <span className="text-xs font-semibold uppercase tracking-[0.15em] text-amber-300">Oferta especial de lançamento</span>
+            </div>
+            <h3 className="text-2xl font-bold text-white">Todos os kits com 80% de desconto</h3>
+            <p className="mt-2 text-amber-200">Aproveite essa promoção especial de lançamento por tempo limitado</p>
+          </div>
+
           <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {products.map((product) => {
-              const { icon: Icon, title, subtitle, description, url, buttonLabel, featured, preview } = product
+              const { badge, coverImage, title, subtitle, description, url, buttonLabel, featured, preview } = product
               return (
                 <motion.div key={title} whileHover={{ y: -4 }} transition={{ duration: 0.2 }}>
                   <Card
-                    className={`h-full border backdrop-blur-sm ${featured ? 'border-amber-400/30 bg-amber-300/10' : 'border-white/10 bg-white/5'}`}
+                    className={`h-full overflow-hidden border backdrop-blur-sm ${featured ? 'border-amber-400/30 bg-amber-300/10' : 'border-white/10 bg-white/5'}`}
                   >
-                    <CardContent className="flex h-full flex-col p-6">
-                      <div className="mb-4 flex items-center justify-between gap-3">
-                        <div className="inline-flex rounded-2xl bg-amber-300/10 p-3 text-amber-300">
-                          <Icon className="h-6 w-6" />
-                        </div>
-                        {featured ? (
-                          <div className="rounded-full border border-amber-400/30 bg-amber-300/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-amber-200">
-                            Destaque
+                    <CardContent className="flex h-full flex-col p-0">
+                      {coverImage && (
+                        <div className="relative aspect-square w-full overflow-hidden">
+                          <img
+                            src={coverImage}
+                            alt={`Capa do ${title}`}
+                            loading="lazy"
+                            className="h-full w-full object-cover"
+                          />
+                          <div className="absolute right-3 top-3 flex flex-col items-end gap-2">
+                            <div className="rounded-full border border-amber-400/40 bg-amber-400/90 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-950 shadow-lg">
+                              80% desconto
+                            </div>
+                            <div className="rounded-full bg-slate-950/70 px-3 py-1 text-[10px] font-semibold text-amber-200 backdrop-blur-sm">
+                              Oferta até <PromoCountdown />
+                            </div>
                           </div>
-                        ) : null}
-                      </div>
-                      <div className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">{subtitle}</div>
-                      <h3 className="mt-2 text-2xl font-bold text-white">{title}</h3>
-                      <p className="mt-3 flex-1 leading-7 text-slate-300">{description}</p>
+                        </div>
+                      )}
+                      <div className="flex flex-1 flex-col p-6">
+                        <div className="flex items-center justify-between gap-3">
+                          <div className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">{subtitle}</div>
+                          {badge && (
+                            <div className="rounded-full border border-amber-400/40 bg-amber-400/90 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.2em] text-slate-950">
+                              {badge}
+                            </div>
+                          )}
+                        </div>
+                        <h3 className="mt-2 text-2xl font-bold text-white">{title}</h3>
+                        <p className="mt-3 flex-1 leading-7 text-slate-300">{description}</p>
 
-                      <div className="mt-6 flex gap-3">
-                        {preview && (
-                          <button
-                            onClick={() => setPreviewProduct(product)}
-                            className="flex items-center justify-center gap-2 rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-sm text-white transition hover:bg-white/10"
+                        <div className="mt-6 flex gap-3">
+                          {preview && (
+                            <button
+                              onClick={() => setPreviewProduct(product)}
+                              className="flex items-center justify-center gap-2 rounded-2xl border border-white/20 bg-white/5 px-4 py-3 text-sm text-white transition hover:bg-white/10"
+                            >
+                              <Eye className="h-4 w-4 text-amber-300" />
+                              Ver amostra
+                            </button>
+                          )}
+                          <a
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex flex-1 items-center justify-center rounded-2xl bg-amber-400 px-4 py-3 font-medium text-slate-950 transition hover:bg-amber-300"
                           >
-                            <Eye className="h-4 w-4 text-amber-300" />
-                            Ver amostra
-                          </button>
-                        )}
-                        <a
-                          href={url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex flex-1 items-center justify-center rounded-2xl bg-amber-400 px-4 py-3 font-medium text-slate-950 transition hover:bg-amber-300"
-                        >
-                          {buttonLabel}
-                          <ArrowRight className="ml-2 h-5 w-5" />
-                        </a>
+                            {buttonLabel}
+                            <ArrowRight className="ml-2 h-5 w-5" />
+                          </a>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
